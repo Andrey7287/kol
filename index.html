@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <title>...</title>
+  <link rel="stylesheet" href="css.css" />
+</head>
+
+<body>
+<h1>Hello</h1>
+  <script type="text/javascript" src="node_modules/requirejs/require.js" data-main="js/config"></script>
+  <script>
+    require(['config'], function () {
+      require(['../js/project'])
+    });
+  </script>
+</body>
+
+</html>
