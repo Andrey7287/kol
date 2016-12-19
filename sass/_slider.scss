@@ -1,0 +1,53 @@
+.slider-outer {
+	background: $bkg-slider;
+	margin-bottom: 35px;
+}
+/* DOTS */
+
+.slick-dots {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: -25px;
+	left: 50%;
+	li {
+		display: inline-block;
+		margin-right: 30px;
+		button {
+			font-size: 0;
+			line-height: 0;
+			padding: 0;
+			border: 0;
+			position: relative;
+			&:focus {
+				outline: none;
+			}
+			&::before {
+				content: ".";
+				font-size: 0;
+				display: inline-block;
+				width: 14px;
+				height: 14px;
+				border-radius: 7px;
+				background: #dcdcdc;
+				position: absolute;
+				top: 0;
+				left: -14px;
+				transition: 0.3s;
+			}
+			&:hover {
+				&::before {
+					background: $bkg-slider;
+				}
+			}
+		}
+		&.slick-active {
+			button {
+				&::before {
+					background: $bkg-slider;
+				}
+			}
+		}
+	}
+}

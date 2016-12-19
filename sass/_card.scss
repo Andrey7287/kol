@@ -1,0 +1,73 @@
+.card {
+
+	@include clearfix;
+	margin-top: -8px;
+
+	&__img {
+		padding: 15px;
+	}
+	.item {
+
+		&__title {
+			font-size: 1.5em;
+		}
+		&__brand {
+			font-size: 1em;
+			line-height: 2.6em;
+		}
+		&__txt {
+			font-size: 1em;
+			font-weight: 400;
+			line-height: 1.6em;
+		}
+		&__price {
+			font-size: 1.5em;
+			@include rub-big;
+		}
+
+	}
+
+}
+
+.info-block {
+	&__title {
+		margin: 17px 0;
+		@include font($size: 18);
+		text-transform: uppercase;
+	}
+	&__sub-title {
+		@include font($size: 18);
+	}
+	table {
+		width: 100%;
+		margin-bottom: 40px;
+		border: 0!important;
+		td{
+			padding: 2px 0;
+			border: 0!important;
+			&:first-child {
+				@include hone($color: #d9d9d9);
+				white-space: nowrap;
+				padding-right: 30px;
+				vertical-align: bottom;
+			}
+		}
+	}
+	&__back {
+		text-align: right;
+		a{
+			@include link($link);
+			line-height: 1.125em;
+		}
+	}
+}
+
+
+.additional {
+	margin-top: 5px;
+	overflow: auto;
+	&__title {
+		@include font($size: 24, $height: 26, $weight: 300);
+		margin: 30px 0;
+	}
+}

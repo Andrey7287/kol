@@ -1,0 +1,11 @@
+.manufacturer-list {
+	margin-top: -4px;
+	&__item {
+		margin-bottom: 30px;
+		text-align: center;
+		.panel__link {
+			display: inline-block;
+		}
+	}
+
+}

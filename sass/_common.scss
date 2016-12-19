@@ -1,65 +1,158 @@
 // Box-sizing
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 *:before,
 *:after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 // Font
 
 body, p {
-  @include font;
-  color: $default;
+	@include font;
+	color: $default-color;
 }
-
+p {
+	text-align: justify;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+//all
+.content {
+	width: 1100px;
+	margin: 0 auto;
+}
 // Reset fonts for relevant elements
 
 input,
 button,
 select,
 textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
 }
 
 
 // Links
 
 a {
-  color: #545454;;
-  text-decoration: none;
-  color: $link;
-  transition: 0.3s;
-  &:hover,
-  &:focus {
-    color: $link-hov;
-    text-decoration: none;
-  }
+	color: $link;
+	transition: 0.3s;
+	text-decoration: none;
+	display: inline-block;
+	&:hover,
+	&:focus {
+		color: $link-hov;
+	}
 
-  &:focus {
-    outline: none;
-  }
+	&:focus {
+		outline: none;
+	}
 }
 
 //NAV
 
 nav {
-  ul{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
+	ul{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
 }
 
 // Headers
 
 h1, .h1 {
-
+	@include font($size: 36, $height: 38, $weight: 300);
+	text-transform: uppercase;
+	margin: 20px 0 30px;
+	color: #e6017e;
+	&--black {
+		color: $default-color;
+	}
 }
+
+.sub-title {
+	@include font($size: 32, $height: 34, $weight: 300);
+	text-transform: uppercase;
+	margin: 20px 0;
+	text-align: center;
+}
+
 h2, .h2 {
-  @include font(700, 32px, 34px, $sans-caption);
-  text-transform: uppercase;
+	@include font($size: 24, $height: 26, $weight: 300);
+	color: #f22a93;
+	margin: 20px 0;
+}
+h3, .h3 {
+	@include font($size: 18, $height: 26);
+	text-transform: uppercase;
+	margin: 15px 0;
+}
+h4, .h4 {
+	@include font($size: 20, $height: 26);
+	margin: 15px 0;
+}
+.main {
+	h1, .h1,
+	h2, .h2,
+	h3, .h3 {
+		text-align: center;
+	}
+}
+.paging {
+	color: #9b9b9b;
+	margin: 15px 0 7px;
+	&__item {
+		@include font($size: 13, $height: 15, $weight: 300);
+		color: #9b9b9b;
+		transition: 0.3s;
+		&::before {
+			content: "";
+		}
+	}
+	a {
+		@include link(#9b9b9b);
+	}
+}
+sup, .sup {
+	color: $pink;
+	position: relative;
+	top: 0;
+	font-size: 1.1em;
+}
+
+.btn {
+	@include background(linear-gradient(#ed0182, #c21875));
+	@include font($size: 24, $height: 47, $weight: 700);
+	display: block;
+	border: 1px solid #ff008b;
+	border-radius: 1px;
+	color: #fff;
+	text-transform: uppercase;
+	box-shadow: 1px 1px 3px 1px rgba(0,0,0,.33);
+	text-align: center;
+	margin: 15px auto;
+	&:hover {
+		@include background(linear-gradient(#c21875, #ed0182));
+		color: #fff;
+	}
+}
+
+.catalog__items ul {
+	padding-left: 17px;
+	list-style-image: url(images/list-style.png);
+	margin: 6px 0 24px;
+	li {
+		padding-left: 10px;
+		margin: 4px 0;
+	}
+}
+.text-page {
+	margin: -10px 0 30px;
+}
+.catalog-inner {
+	margin: 20px 0;
 }

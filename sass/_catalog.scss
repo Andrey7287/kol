@@ -1,0 +1,144 @@
+.catalog {
+	@include clearfix;
+	margin-left: -15px;
+	margin-bottom: 20px;
+	&__desc {
+		p:first-child {
+			margin-top: -10px;
+		}
+	}
+	&__paging {
+		margin: 30px auto;
+		display: block;
+		width: 440px;
+		&--bottom {
+			margin: 0 auto 13px;
+		}
+		.pag {
+			position: relative;
+			@include font($size: 14);
+			padding: 0 8px;
+			&::before {
+				position: absolute;
+				content: ".";
+				font-size: 0;
+				line-height: 0;
+				width: 19px;
+				height: 6px;
+				top: 11px;
+			}
+			@each $arrow in prev,next {
+
+				@if $arrow == prev {
+					&--#{$arrow} {
+						margin-right: 10px;
+					}
+				}
+				@if $arrow == next {
+					&--#{$arrow} {
+						margin-left: 10px;
+					}
+				}
+
+				&--#{$arrow}::before {
+					background: sprite($arrows, arrow-#{$arrow}) no-repeat;
+					@if $arrow == prev {
+						left: -24px;
+					}
+					@if $arrow == next {
+						right: -24px;
+					}
+				}
+
+				&--#{$arrow}:hover::before {
+					background: sprite($arrows, arrow-#{$arrow}-hovered) no-repeat;
+				}
+
+			}
+
+			&:hover {
+				color: #999;
+			}
+		}
+
+	}
+}
+/* CATALOG MAIN PAGE */
+.thumb {
+	display: block;
+	position: relative;
+	background: rgba(238,238,238,1);
+	background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(238,238,238,1) 100%);
+	box-shadow: inset 0 0 0 1px #f7f7f7,
+	-1px -1px 0 0 #f2f2f2,
+	1px 1px 3px 2px #d9d9d9;
+	border-radius: 5px;
+	padding: 9px 5px;
+	height: 152px;
+	overflow: hidden;
+	margin-bottom: 25px;
+	color: $default-color;
+	&:hover,
+	&:focus{
+		box-shadow: inset 0 0 0 1px #dd8fb9,
+		-1px -1px 0 0 #f2f2f2,
+		1px 1px 3px 2px #e3e3e3;
+		color: $link-hov;
+	}
+	&__title {
+		@include font($size: 18, $height: 22, $weight: 600);
+
+		margin-bottom: 5px;
+		position: relative;
+		z-index: 10;
+	}
+	&__txt {
+		@include font($size: 15, $height: 18);
+		color: #666;
+		position: relative;
+		z-index: 10;
+	}
+	&__img {
+		position: absolute;
+		bottom: 5px;
+		right: 5px;
+		z-index: 5;
+	}
+}
+/* CATALOG INNER */
+.item {
+	margin-bottom: 50px;
+	&__title {
+		@include font($size: 20, $height: 24, $weight: 300);
+		padding-right: 15px;
+		color: #e6017e;
+		a {
+			color: $default-color;
+			&:hover {
+				color: #e6017e;
+			}
+		}
+	}
+	&__brand {
+		@include font($size: 16, $height: 30, $weight: 700);
+		color: #999;
+		span {
+			font-weight: 400;
+		}
+	}
+	&__img {
+
+	}
+	&__txt {
+		@include font($size: 13, $height: 20, $weight: 300);
+	}
+	&__pack,
+	&__param,
+	&__price {
+		margin-top: 15px;
+	}
+	&__price {
+		@include font($size: 20, $height: 20);
+		@include rub();
+	}
+}

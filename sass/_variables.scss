@@ -1,31 +1,27 @@
 /* Fonts */
-$pt-sans: 'PT Sans', sans-serif;
-$sans-caption: 'PT Sans Caption', sans-serif;
-$arial: 'Arial', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
 
-$default-font: $pt-sans;
-$default-size: 16px;
-$default-height: 22px;
+$default-font: $open-sans;
+$base-font-size: 16;
+$base-line-height: 26;
+$default-color: #333;
+$footer-color: #ef7bba;
 
+/* Colors */
 $grey: #777;
-$white: #fafafa;
-$yellow: #ffc61f;
-$blue: #034a7d;
-
-$default: #545454;
-
-$link: #045a96;
-$link-hov: #ea3f00;
+$link: #a12569;
+$link-hov: darken($link, 15%);
+$pink: #f22a93;
 
 /* Bkg colors */
+$bkg-footer: #a12569;
+$bkg-slider: #e6017e;
 
 /* Compass */
 
-/* Sprites */
-$cubs: sprite-map("../images/cubs/*.png");
-
-$base-font-size: 14px;
-$base-line-height: 10px;
+$panel: sprite-map("../images/panel/*.png");
+$social: sprite-map("../images/social/*.png");
+$arrows: sprite-map("../images/paging/*.png");
 
 
 

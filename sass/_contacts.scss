@@ -1,0 +1,48 @@
+.map {
+	margin-top: -3px;
+	height: 515px;
+}
+
+.contacts {
+	@include font($size: 18, $height: 28);
+	&__title {
+		display: inline-block;
+		font-weight: 700;
+		color: $grey;
+		margin-top: 13px;
+	}
+	a {
+		@include link($pink);
+	}
+}
+
+.form {
+	line-height: 1.75em;
+	@include clearfix;
+	&__title {
+		@include font($size: 18, $height: 54);
+		text-transform: uppercase;
+	}
+	form {
+		margin-top: 10px;
+	}
+	input,
+	textarea {
+		width: 100%;
+		margin: 5px 0 12px;
+		padding-left: 10px;
+	}
+	textarea {
+		height: 200px;
+		margin-bottom: 20px;
+	}
+	.capcha {
+		width: 304px;
+		float: left;
+	}
+	.btn {
+		width: 340px;
+		float: right;
+		margin: 0;
+	}
+}

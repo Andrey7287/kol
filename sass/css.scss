@@ -1,13 +1,12 @@
 @import "../node_modules/normalize.scss/normalize.scss";
 @import "../node_modules/slick-carousel/slick/slick.scss";
-@import "../node_modules/slick-carousel/slick/slick-theme.scss";
 @import "../node_modules/jquery-fancybox/source/scss/jquery.fancybox.scss";
-//@import "../node_modules/jquery.formstyler/jquery.formstyler.css";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
-@import "compass/typography/vertical_rhythm";
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700';
 
 @import "mixins";
+@import "compass/css3/images";
 @import "variables";
 @import "common";
 
@@ -17,3 +16,8 @@
 @import "main";
 @import "aside";
 @import "footer";
+@import "panels";
+@import "catalog";
+@import "card";
+@import "contacts";
+@import "manufacturer";
